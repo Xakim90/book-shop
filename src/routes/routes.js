@@ -3,6 +3,7 @@ import Warface from "../pages/Warface/Warface";
 import Armata from "../pages/Armata";
 import AdbIcon from '@material-ui/icons/Adb';
 import Test from "../pages/Test";
+import Sardor from "../pages/Sardor";
 
 export const ROUTES = [
     
@@ -41,5 +42,11 @@ export const ROUTES = [
         icon: <AdbIcon />,
         url: "/test",
         component: () => <Test />
+    },
+    {
+        name: "Sardor",
+        icon: <AdbIcon />,
+        url: "/sardor",
+        component: () => <Sardor />
     }
 ]
