@@ -1,7 +1,8 @@
+import { StylesProvider } from '@material-ui/core';
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import Input from '../static/Input'
-import "./Sardor.css";
+import Styles from './Sardor.module.css'
 // import { yupResolver } from '@hookform/resolvers/yup'
 // import * as yup from 'yup'
 
@@ -13,7 +14,7 @@ export default function Sardor() {
     const onSubmit = data => console.log('Отправлено:', data)
     
     return (
-        <div className="command">
+        <div className={Styles.commandDiv}>
             <h1 className="text-xl font-bold text-center">Registration</h1>
             <form onSubmit={handleSubmit(onSubmit)}>
                 {
@@ -26,7 +27,7 @@ export default function Sardor() {
                                 <p>
                                     <input
                                         name={input.name}
-                                        className="input"
+                                        className="p-4 border w-64 max-w-7xl text-xs tracking-widest border-black"
                                         type={input.type}
                                         {...register(`${input.txt}`)}
                                     />
@@ -35,7 +36,8 @@ export default function Sardor() {
                         )
                     }) : null
                 }
-                <button type="submit" className="btn hover:bg-blue-400">
+                <br />
+                <button type="submit" className="mt-4 px-12 py-4 bg-black text-white uppercase">
                     Submit
                 </button>
             </form>
