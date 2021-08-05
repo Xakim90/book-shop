@@ -2,24 +2,16 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import Input from '../static/Input'
 import "./Sardor.css";
-import { yupResolver } from '@hookform/resolvers/yup'
-import * as yup from 'yup'
-
-const schema = yup.object().shape({
-    username: yup.string().required(),
-    password: yup.string().required().min(5),
-    email: yup.string().required().email(),
-})
+// import { yupResolver } from '@hookform/resolvers/yup'
+// import * as yup from 'yup'
 
 
 export default function Sardor() {
 
-    const { register, handleSubmit, errors } = useForm({
-        resolver: yupResolver(schema)
-    })
+    const { register, handleSubmit } = useForm({ mode: 'onChange' })
 
-    const onSubmit = (data) => console.log(data)
-    console.log(errors)
+    const onSubmit = data => console.log('Отправлено:', data)
+    
     return (
         <div className="command">
             <h1 className="text-xl font-bold text-center">Registration</h1>
@@ -36,15 +28,14 @@ export default function Sardor() {
                                         name={input.name}
                                         className="input"
                                         type={input.type}
-                                        ref={{...register}}
+                                        {...register(`${input.txt}`)}
                                     />
                                 </p>
-                                <p className="messages">{errors}</p>
                             </div>
                         )
                     }) : null
                 }
-                <button className="btn" type="submit">
+                <button type="submit" className="btn hover:bg-blue-400">
                     Submit
                 </button>
             </form>

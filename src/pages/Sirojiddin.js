@@ -5,7 +5,7 @@ function Sirojiddin() {
     const {
         register,
         handleSubmit,
-        watch
+        watch,
     } = useForm({ mode: 'onChange' });
 
     const onsubmit = data => console.log('Отправлено:', data);
@@ -16,7 +16,7 @@ function Sirojiddin() {
     console.log('возраст: ' + password);
 
     return (
-        <div className="command ">
+        <div className="command">
             <h1 className="text-xl font-bold">Registration</h1>
             <form onSubmit={handleSubmit(onsubmit)}>
                 <h1 className="font-serif">email</h1>
