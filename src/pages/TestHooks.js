@@ -39,7 +39,6 @@ const TestHooks = (props) => {
                                     )
                                 }) : null
                             }
-
                             <p>{count} marta bosildi</p>
                             <button
                                 onClick={() => setCount(count + 1)}

@@ -1,4 +1,5 @@
 import { React, useForm } from 'react-hook-form';
+import Styles from './Sirojiddin.module.css'
 
 function Sirojiddin() {
 
@@ -16,7 +17,7 @@ function Sirojiddin() {
     console.log('возраст: ' + password);
 
     return (
-        <div className="command">
+        <div className={Styles.center}>
             <h1 className="text-xl font-bold">Registration</h1>
             <form onSubmit={handleSubmit(onsubmit)}>
                 <h1 className="font-serif">email</h1>
