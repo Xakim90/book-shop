@@ -61,7 +61,8 @@ const Register = () => {
                          <Button 
                     type="submit"
                     variant="contained" 
-                    color="secondary">
+                    color="secondary"
+                    >
                         Register
                     </Button>
                     <Button
@@ -72,7 +73,7 @@ const Register = () => {
                         Cancel 
                     </Button>
                     </form>
-                    <br />
+                    
                    
                 </div>
 
