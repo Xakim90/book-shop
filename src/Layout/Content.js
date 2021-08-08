@@ -6,7 +6,6 @@ import { ROUTES } from "../routes/routes";
 const Content = (props) => {
     return (
         <>
-          
             <Switch>
                 {ROUTES.map((route, index) => {
                     return <Route {...route} path={route.url} key={index} component={route.component} />
