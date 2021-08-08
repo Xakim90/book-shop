@@ -4,6 +4,7 @@ import Sardor from "../pages/Sardor";
 import Sirojiddin from "../pages/Sirojiddin";
 import Uliqpan from "../pages/Uliqpan";
 import Register from "../pages/Register";
+import AddBook from "../pages/AddBook/AddBook";
 
 export const ROUTES = [
     
@@ -38,4 +39,10 @@ export const ROUTES = [
         url: "/register",
         component: () => <Register />
     },
+    {
+        name: "AddBook",
+        icon: <AdbIcon />,
+        url: "/addBook",
+        component: () => <AddBook />
+    }
 ]
