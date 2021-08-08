@@ -6,7 +6,6 @@ function Uliqpan() {
   const {
     register,
     handleSubmit,
-    watch,
   } = useForm({ mode: 'onChange' });
 
   const onsubmit = data => console.log("Jonatish:", data);
