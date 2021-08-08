@@ -21,8 +21,8 @@ function Uliqpan() {
     console.log('Password: ' + password);
 
     return (
-        <div className="w-10/12 bg-green-100 text-center h-4/6 mt-10 ml-10">
-            <div1 className=" rounded-xl h-full ">
+        <div className="w-10/12 text-center h-4/6 mt-10 ml-10">
+            <div1 className="rounded-xl h-full ">
             <h1 className="text-xl text-center font-bold">R♥e♥g♥i♥s♥t♥e♥e♥r</h1>
             <form onSubmit={handleSubmit(onsubmit)}>
                 <h1>𝗡𝗮𝗺𝗲</h1>
