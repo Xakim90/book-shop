@@ -5,6 +5,7 @@ import AdbIcon from '@material-ui/icons/Adb';
 import Test from "../pages/Test";
 import Sardor from "../pages/Sardor";
 import Sirojiddin from "../pages/Sirojiddin";
+import Register from "../pages/Register";
 
 export const ROUTES = [
     
@@ -55,5 +56,11 @@ export const ROUTES = [
         icon: <AdbIcon />,
         url: "/sirojiddin",
         component: () => <Sirojiddin />
+    },
+    {
+        name: "Register",
+        icon: <AdbIcon />,
+        url: "/register",
+        component: () => <Register />
     }
 ]
