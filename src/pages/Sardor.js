@@ -1,8 +1,7 @@
-import { StylesProvider } from '@material-ui/core';
 import React from 'react'
-import { useForm } from 'react-hook-form'
-import Input from '../static/Input'
-import Styles from './Sardor.module.css'
+import { useForm } from 'react-hook-form';
+import Input from '../static/Input';
+import Styles from './Sardor.module.css';
 // import { yupResolver } from '@hookform/resolvers/yup'
 // import * as yup from 'yup'
 
