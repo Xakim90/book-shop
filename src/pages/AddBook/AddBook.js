@@ -86,7 +86,6 @@ const AddBook = () => {
 
     const onSubmit = async (data) => {
         let newData = arrayToFormData(data);
-        debugger
         let res = await Axios.post(url, newData)
         console.log(res);
     }
