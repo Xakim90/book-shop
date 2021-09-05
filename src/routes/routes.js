@@ -10,38 +10,37 @@ export const ROUTES = [
     
   
     {
-        name: "Test",
-        icon: <AdbIcon />,
+        name: "BOOKS",
         url: "/test",
         component: () => <Test />
     },
     {
-        name: "Sardor",
-        icon: <AdbIcon />,
+        name: "ART",
         url: "/sardor",
         component: () => <Sardor />
     },
     {
-        name: "Sirojiddin",
-        icon: <AdbIcon />,
+        name: "FURNITURE",
         url: "/sirojiddin",
         component: () => <Sirojiddin />
     },
     {
-        name: "Uliqpan",
-        icon: <AdbIcon />,
+        name: "ACCESOIRES",
         url: "/uliqpan",
         component: () => <Uliqpan />
     },
     {
-        name: "Register",
-        icon: <AdbIcon />,
+        name: "APAREL",
         url: "/register",
         component: () => <Register />
     },
     {
-        name: "AddBook",
-        icon: <AdbIcon />,
+        name: "COLLABARATIOS",
+        url: "/addBook",
+        component: () => <AddBook />
+    },
+    {
+        name: "BLOG",
         url: "/addBook",
         component: () => <AddBook />
     }

@@ -1,12 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
-import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Axios from "axios";
 import { useForm } from "react-hook-form";
 import { getLayoutFields } from "./items";
 import SelectClassic from "../../components/SelectClassic";
 import { arrayToFormData } from "../../utils/helpers";
-import FileInput from "../../components/FileInput";
 
 
 const getField = ({ field, register, errors }) => {
@@ -15,13 +13,15 @@ const getField = ({ field, register, errors }) => {
             return (
                 <label className="flex" key={field.name}>
                     <span className="label_title">{field.label}</span>
-                    <input
-                        className="primary"
-                        name={field.name}
-                        {...register(field.name, { required: true })}
-                    />
+                    <div className="ml-10 text-left">
+                        <input
+                            className=""
+                            name={field.name}
+                            {...register(field.name, { required: true })}
+                        />
+                    </div>
                     {errors[field.name] && (
-                        <span className="input_error">Obyaztelno pole</span>
+                        <span className="input_error">To'ldir tez</span>
                     )}
                 </label>
             );
@@ -30,7 +30,7 @@ const getField = ({ field, register, errors }) => {
                 <label className="flex" key={field.name}>
                     <div>
                         {errors[field.name] && (
-                            <span className="input_error">Obyaztelno pole</span>
+                            <span className="input_error">To'ldir tez</span>
                         )}
                         <SelectClassic
                             type="secondary fs14"
@@ -41,7 +41,6 @@ const getField = ({ field, register, errors }) => {
                         />
                     </div>
                 </label>
-
             );
 
         default:
@@ -91,9 +90,9 @@ const AddBook = () => {
         console.log(res);
     }
     return (
-        <>
-            <div className="flex h-screen flex-wrap content-center justfy-center">
-                <div>
+        <div className="bg-gray-200">
+            <div className="flex justify-center my-10">
+                <div className="">
                     <form onSubmit={handleSubmit(onSubmit)} noValidate autoComplete="off">
                         <p className="text-center font-bold text-lg">Registratsiya</p>
                         <br />
@@ -120,9 +119,8 @@ const AddBook = () => {
                     </form>
                 </div>
             </div>
-        </>
+        </div>
     )
-
 }
 
 
