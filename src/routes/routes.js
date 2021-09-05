@@ -5,55 +5,51 @@ import AdbIcon from '@material-ui/icons/Adb';
 import Test from "../pages/Test";
 import Sardor from "../pages/Sardor";
 import Sirojiddin from "../pages/Sirojiddin";
+import Register from "../pages/Register";
+import AddBook from "../pages/AddBook/AddBook";
 
 export const ROUTES = [
-    
+
     {
-        name: "Conqueror's Blade",
-        icon: <AdbIcon />,
-        url: "/blade",
-        component: () => <Blade />
-    },
-    {
-        name: "Warface",
-        icon: <AdbIcon />,
-        url: "/warface",
-        component: () => <Warface />
-    },
-    {
-        name: "Armored Warfare: Проект Армата",
-        icon: <AdbIcon />,
-        url: "/armata",
-        component: () => <Armata />
-    },
-    {
-        name: "CrossFire",
-        icon: <AdbIcon />,
-        url: "/crossfire",
-        component: () => <Blade />
-    },
-    {
-        name: "Skyforge",
-        icon: <AdbIcon />,
-        url: "/skyforge",
-        component: () => <Blade />
-    },
-    {
-        name: "Test",
+        name: "BOOKS",
         icon: <AdbIcon />,
         url: "/test",
         component: () => <Test />
     },
     {
-        name: "Sardor",
+        name: "ART",
         icon: <AdbIcon />,
         url: "/sardor",
         component: () => <Sardor />
     },
     {
-        name: "Sirojiddin",
+        name: "FURNITURE",
         icon: <AdbIcon />,
         url: "/sirojiddin",
         component: () => <Sirojiddin />
-    }
+    },
+    {
+        name: "ACCESORIES",
+        icon: <AdbIcon />,
+        url: "/register",
+        component: () => <Register />
+    },
+    {
+        name: "APPAREL",
+        icon: <AdbIcon />,
+        url: "/addbook",
+        component: () => <AddBook />
+    },
+    {
+        name: "COLLABORATIONS",
+        icon: <AdbIcon />,
+        url: "/addbook",
+        component: () => <AddBook />
+    },
+    {
+        name: "BLOG",
+        icon: <AdbIcon />,
+        url: "/addbook",
+        component: () => <AddBook />
+    },
 ]
