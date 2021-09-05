@@ -1,6 +1,3 @@
-import Blade from "../pages/Blade";
-import Warface from "../pages/Warface/Warface";
-import Armata from "../pages/Armata";
 import AdbIcon from '@material-ui/icons/Adb';
 import Test from "../pages/Test";
 import Sardor from "../pages/Sardor";
