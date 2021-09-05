@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-<<<<<<< HEAD
 // import { uploadImage } from "../../api/api_calls";
-=======
->>>>>>> 08d8070b564aadff859427009598b7ed090dca2c
 
 function FileInput({
   refInput = null,
@@ -40,11 +37,7 @@ function FileInput({
             type="file"
             placeholder=""
             name={name}
-<<<<<<< HEAD
             {...register(name, { required: true })}
-=======
-            ref={register({ required })}
->>>>>>> 08d8070b564aadff859427009598b7ed090dca2c
           />
         </div>
       </div>
@@ -53,8 +46,4 @@ function FileInput({
   );
 }
 
-<<<<<<< HEAD
 export default FileInput;
-=======
-export default FileInput;
->>>>>>> 08d8070b564aadff859427009598b7ed090dca2c
