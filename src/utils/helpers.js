@@ -20,7 +20,7 @@ export const arrayToFormData = (data) => {
         formData.append(prop, data[prop]);
       }
     }
-    return formData;
+    return formData; 
   };
   
   export const getValueLabel = (data, ...request) => {
@@ -32,3 +32,4 @@ export const arrayToFormData = (data) => {
       };
     }) : null;
   };
+  

@@ -4,10 +4,17 @@ import './index.css';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from "react-router-dom";
- 
+import store from "./redux/redux-store";
+import AxiosConfig from "./config/AxiosConfig";
+import { connect, Provider } from "react-redux";
+
 ReactDOM.render(
   <Router>
-    <App />
+    <Provider store={store}>
+      <AxiosConfig>
+        <App />
+      </AxiosConfig>
+    </Provider>
   </Router>,
   document.getElementById('root')
 );

@@ -6,7 +6,6 @@ const Test = () => {
     return (
         <>
             <TestHooks />
-            {/* <TestState color="blue" text="SALOM" son="25"/> */}
         </>
     )
 }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+// import { uploadImage } from "../../api/api_calls";
 
 function FileInput({
   refInput = null,
@@ -14,6 +15,10 @@ function FileInput({
     setloading(true);
     let formData = new FormData();
     formData.append("file", e.target.files[0]);
+    // uploadImage(formData).then((res) => {
+    //   setloading(false);
+    //   setimageUrl(res.data.url);
+    // });
   };
 
   return (
@@ -32,7 +37,7 @@ function FileInput({
             type="file"
             placeholder=""
             name={name}
-            ref={register({ required })}
+            {...register(name, { required: true })}
           />
         </div>
       </div>

@@ -1,47 +1,53 @@
-import AdbIcon from '@material-ui/icons/Adb';
 import Test from "../pages/Test";
 import Sardor from "../pages/Sardor";
 import Sirojiddin from "../pages/Sirojiddin";
-import Uliqpan from "../pages/Uliqpan";
 import Register from "../pages/Register";
 import AddBook from "../pages/AddBook/AddBook";
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 export const ROUTES = [
-    
-  
+
     {
-        name: "BOOKS",
+        name: "HOME",
         url: "/test",
-        component: () => <Test />
+        component: () => <Test />,
+        exact: true
     },
     {
         name: "ART",
         url: "/sardor",
-        component: () => <Sardor />
+        component: () => <Sardor />,
+         exact: false
     },
     {
         name: "FURNITURE",
         url: "/sirojiddin",
-        component: () => <Sirojiddin />
+        component: () => <Sirojiddin />,
+         exact: false
     },
     {
-        name: "ACCESOIRES",
-        url: "/uliqpan",
-        component: () => <Uliqpan />
-    },
-    {
-        name: "APAREL",
+        name: "ACCESORIES",
         url: "/register",
-        component: () => <Register />
+        component: () => <Register />,
+         exact: false
     },
     {
-        name: "COLLABARATIOS",
-        url: "/addBook",
-        component: () => <AddBook />
+        name: "APPAREL",
+        url: "/addbook",
+        component: () => <AddBook />,
+         exact: false
+    },
+    {
+        name: "COLLABORATIONS",
+        icon: <ExpandMoreIcon />,
+        url: "/addbook",
+        component: () => <AddBook />,
+         exact: false
     },
     {
         name: "BLOG",
-        url: "/addBook",
-        component: () => <AddBook />
-    }
+        url: "/addbook",
+        component: () => <AddBook />,
+         exact: false
+    },
 ]
