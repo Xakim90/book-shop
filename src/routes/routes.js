@@ -1,4 +1,3 @@
-import AdbIcon from '@material-ui/icons/Adb';
 import Test from "../pages/Test";
 import Sardor from "../pages/Sardor";
 import Sirojiddin from "../pages/Sirojiddin";

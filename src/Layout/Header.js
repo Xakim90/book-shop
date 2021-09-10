@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import { ROUTES } from "../routes/routes";
-import styles from "./Layout.module.css";
 import "./main.css";
 import Currency from "../components/Currency";
 import SearchIcon from '@material-ui/icons/Search';
@@ -33,7 +32,7 @@ const Header = (props) => {
     }
 
     return (
-        <div className={styles.main}>
+        <div>
             <br />
             <div className="grid grid-cols-12 justify-items-center place-items-center">
                 <div className="col-span-3 justify-items-start">

@@ -171,3 +171,9 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+.content {
+  background-image: url("https://cdn.shopify.com/s/files/1/0880/2454/files/0_bda999bf-aeb8-4cec-8026-616365c35b8b_1500x.jpg?v=1622668580");
+  background-position: initial;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

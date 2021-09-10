@@ -1,6 +1,6 @@
 import './App.css';
 import Header from './Layout/Header';
-import Sidebar from './Layout/Sidebar';
+import Footer from './Layout/Footer';
 import Content from './Layout/Content';
 
 function App() {
@@ -12,6 +12,9 @@ function App() {
         </div>
         <div className="content col-span-12 px-2">
           <Content />
+        </div>
+        <div className="col-span-12">
+          <Footer />
         </div>
       </div>
     </div>

@@ -24,7 +24,6 @@ const FileUpload = ({ onFileSelectSuccess, onFileSelectError, setFile }) => {
 
     return (
         <div className="file-uploader">
-            {/* <img src={ } /> */}
             <input type="file" onChange={handleFileInput} />
             <br />
             <button
