@@ -4,7 +4,8 @@ const Currency = (props) => {
     const [currency, setCurrency] = useState("usd");
 
     const handleChange = (e) => {
-        console.log(e.target.value)
+        // console.log(e.target.value)
+        setCurrency(e.target.value)
     }
 
     return (
