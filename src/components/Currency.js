@@ -9,7 +9,7 @@ const Currency = (props) => {
     }
 
     return (
-        <div className="border-black border">
+        <div className="border-gray-400 border text-sm font-mono">
             <select onChange={handleChange}>
                 <option value="usd">USD</option>
                 <option value="eur">EUR</option>

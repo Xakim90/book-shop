@@ -34,7 +34,7 @@ const Header = (props) => {
     return (
         <div>
             <br />
-            <div className="grid grid-cols-12 justify-items-center place-items-center">
+            <div className="grid grid-cols-12 place-items-center">
                 <div className="col-span-3 justify-items-start">
                     <Currency />
                 </div>
