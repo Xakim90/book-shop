@@ -6,11 +6,14 @@ import "./main.css";
 import Currency from "../components/Currency";
 import SearchIcon from '@material-ui/icons/Search';
 import PersonIcon from '@material-ui/icons/Person';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 const Header = (props) => {
     const [hidden, setHidden] = useState("");
     const [hidden2, setHidden2] = useState("hidden");
     const [hidden3, setHidden3] = useState("hidden");
+    const [more, setMore] = useState(false);
 
     const toggleInput = () => {
         setHidden("invisible");
@@ -30,7 +33,7 @@ const Header = (props) => {
     }
 
     return (
-        <div className={styles.main}>
+        <div className={styles.main + " h-24"}>
             <br />
             <div className="flex justify-between">
                 <div>
@@ -54,18 +57,39 @@ const Header = (props) => {
             </div>
             <br />
             <br />
-            <br />
             <div className="flex justify-center my-auto">
 
-                <div className="grid grid-cols-7 gap-4 cursor-pointer">
+                <div className="grid grid-cols-8 gap-4 cursor-pointer">
                     {
                         ROUTES.map((route, index) => {
                             return (
-                                <div key={index + route}>
+                                <div key={index + route} className={route.icon ? "myClass2" : ""}>
                                     <Link
                                         to={route.url}>
-                                        <span className="no-underline text-sm">{route.name}</span>
+                                        <span
+                                            // onMouseOver={route.icon ? () => setMore(true) : null}
+                                            // onMouseOut={route.icon ? () => setMore(false) : null}
+                                            className="no-underline text-sm ">
+                                            {route.name}
+                                            {route.icon ?
+                                                <span ><ExpandMoreIcon fontSize="small" className="myClass3"/></span> : ""
+                                            }
+                                        </span>
                                     </Link>
+                                    {
+                                        route.icon ?
+                                            (
+                                                <div className="relative myClass">
+                                                    <div className="absolute p-3">
+                                                        <div>Sirojiddin</div>
+                                                        <div>Zuxriddinov</div>
+                                                        <div>Zuxriddinov</div>
+                                                        <div>Zuxriddinov</div>
+                                                    </div>
+                                                </div>
+                                            )
+                                            : null
+                                    }
                                 </div>
                             )
                         })

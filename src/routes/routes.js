@@ -4,49 +4,55 @@ import Sardor from "../pages/Sardor";
 import Sirojiddin from "../pages/Sirojiddin";
 import Register from "../pages/Register";
 import AddBook from "../pages/AddBook/AddBook";
+import Home from '../pages/Home';
 
 export const ROUTES = [
-
+    {
+        name: "HOME",
+        url: "/",
+        component: () => <Home />,
+        exact: true
+    },
     {
         name: "BOOKS",
-        icon: <AdbIcon />,
         url: "/test",
-        component: () => <Test />
+        component: () => <Test />,
+        exact: false
     },
     {
         name: "ART",
-        icon: <AdbIcon />,
         url: "/sardor",
-        component: () => <Sardor />
+        component: () => <Sardor />,
+        exact: false
     },
     {
         name: "FURNITURE",
-        icon: <AdbIcon />,
         url: "/sirojiddin",
-        component: () => <Sirojiddin />
+        component: () => <Sirojiddin />,
+        exact: false
     },
     {
         name: "ACCESORIES",
-        icon: <AdbIcon />,
         url: "/register",
-        component: () => <Register />
+        component: () => <Register />,
+        exact: false
     },
     {
         name: "APPAREL",
-        icon: <AdbIcon />,
         url: "/addbook",
-        component: () => <AddBook />
+        component: () => <AddBook />,
+        exact: false
     },
     {
         name: "COLLABORATIONS",
-        icon: <AdbIcon />,
+        icon: "^",
         url: "/addbook",
-        component: () => <AddBook />
+        component: () => <AddBook />,
     },
     {
         name: "BLOG",
-        icon: <AdbIcon />,
         url: "/addbook",
-        component: () => <AddBook />
+        component: () => <AddBook />,
+        exact: false
     },
 ]

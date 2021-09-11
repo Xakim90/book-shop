@@ -5,13 +5,13 @@ import { ROUTES } from "../routes/routes";
 
 const Content = (props) => {
     return (
-        <>
+        <div>
             <Switch>
                 {ROUTES.map((route, index) => {
-                    return <Route {...route} path={route.url} key={index} component={route.component} />
+                    return <Route {...route} exact={route.exact} path={route.url} key={index} component={route.component} />
                 })}
             </Switch>
-        </>
+        </div>
     )
 }
 export default Content;
