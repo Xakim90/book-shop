@@ -47,7 +47,6 @@ export const ROUTES = [
         icon: "^",
         url: "/collaborations",
         component: () => <AddBook />,
-        exact: false
     },
     {
         name: "BLOG",
