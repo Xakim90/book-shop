@@ -48,7 +48,6 @@ const getField = ({ field, register, errors }) => {
 };
 
 const AddBook = () => {
-    const [] = useState("");
     const [selectedFile, setSelectedFile] = useState(null);
     const [file, setFile] = useState(null);
     const url = "http://localhost:8000/api/books";

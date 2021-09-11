@@ -38,7 +38,7 @@ export const ROUTES = [
     },
     {
         name: "APPAREL",
-        url: "/addbook",
+        url: "/apparel",
         component: () => <AddBook />,
         exact: false
     },

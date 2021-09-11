@@ -76,10 +76,9 @@ const Header = (props) => {
                                             (
                                                 <div className="relative shadow-2xl myClass bg-white">
                                                     <div className="absolute p-3">
-                                                        <div>Sirojiddin</div>
-                                                        <div>Zuxriddinov</div>
-                                                        <div>Zuxriddinov</div>
-                                                        <div>Zuxriddinov</div>
+                                                        <div>Salom</div>
+                                                        <div>Salom</div>
+                                                        <div>Salom</div>
                                                     </div>
                                                 </div>
                                             )
