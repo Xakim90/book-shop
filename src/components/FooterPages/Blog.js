@@ -3,7 +3,7 @@ import React from 'react';
 const Blog = () => {
     return (
         <>
-            <h1>jumon</h1>
+            <h1 className="h-screen">jumon</h1>
         </>
     )
 }

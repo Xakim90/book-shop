@@ -3,51 +3,56 @@ import Sardor from "../pages/Sardor";
 import Sirojiddin from "../pages/Sirojiddin";
 import Register from "../pages/Register";
 import AddBook from "../pages/AddBook/AddBook";
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Home from '../pages/Home';
 
 export const ROUTES = [
-
     {
         name: "HOME",
+        url: "/",
+        component: () => <Home />,
+        exact: true
+    },
+    {
+        name: "BOOKS",
         url: "/test",
         component: () => <Test />,
-        exact: true
+        exact: false
     },
     {
         name: "ART",
         url: "/sardor",
         component: () => <Sardor />,
-         exact: false
+        exact: false
     },
     {
         name: "FURNITURE",
         url: "/sirojiddin",
         component: () => <Sirojiddin />,
-         exact: false
+        exact: false
     },
     {
         name: "ACCESORIES",
         url: "/register",
         component: () => <Register />,
-         exact: false
+        exact: false
     },
     {
         name: "APPAREL",
         url: "/addbook",
         component: () => <AddBook />,
-         exact: false
+        exact: false
     },
     {
-        name: "COLLABORATIONS",
-        icon: <ExpandMoreIcon />,
-        url: "/addbook",
+        name: "COLLABORATI",
+        icon: "^",
+        url: "/collabaration",
         component: () => <AddBook />,
-         exact: false
+        exact: false
     },
     {
         name: "BLOG",
-        url: "/addbook",
+        url: "/blog",
         component: () => <AddBook />,
-         exact: false
+        exact: false
     },
 ]

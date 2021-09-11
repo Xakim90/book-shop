@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import Axios from 'axios';
 import instance from '../api/instance';
 
 const FileUpload = ({ onFileSelectSuccess, onFileSelectError, setFile }) => {

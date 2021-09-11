@@ -9,9 +9,8 @@ import AboutUs from "../components/FooterPages/AboutUs";
 export const ROUTES2 = [
     {
         name: "About Us",
-        url: "/aboutus",
+        url: "/about",
         component: () => <AboutUs />,
-        exact: false
     },
     {
         name: "Contact",
@@ -27,7 +26,7 @@ export const ROUTES2 = [
     },
     {
         name: "Shipping / Returns",
-        url: "/shipping/returns",
+        url: "/shipping_returns",
         component: () => <ShippingReturns />,
         exact: false
     },

@@ -1,14 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import Button from '@material-ui/core/Button';
 import Axios from "axios";
 import { useForm } from "react-hook-form";
 import { getLayoutFields } from "./items";
 import SelectClassic from "../../components/SelectClassic";
 import FileUpload from "../../components/FileUpload";
-import UploadButton from "../../components/UploadButton";
-import { arrayToFormData } from "../../utils/helpers";
-import FileInput from "../../components/FileInput";
-import { field_settings } from "./offer_fields";
 
 const getField = ({ field, register, errors }) => {
 
@@ -46,73 +42,25 @@ const getField = ({ field, register, errors }) => {
                     </div>
                 </label>
             );
-        // case "file":
-        // case "image":
-        //     return (
-        //         <label className="flex" key={field.name}>
-        //             <div>
-        //                 {errors[field.name] && (
-        //                     <span className="input_error">Обязательно поле</span>
-        //                 )}
-        //                 <UploadButton 
-        //                     text={field.label}
-        //                     register={register}
-        //                     name={field.name}
-        //                     accept={field.accept}
-        //                 />
-        //             </div>
-
-        //         </label>
-        //     );
         default:
             break;
     }
 };
 
 const AddBook = () => {
-    const [name, setName] = useState("");
+    const [] = useState("");
     const [selectedFile, setSelectedFile] = useState(null);
     const [file, setFile] = useState(null);
-    // const inputFile = useRef(null);
-    //const url = "https://deliver-project.herokuapp.com/api/books";
     const url = "http://localhost:8000/api/books";
 
-    // const handleFile = (e) => {
-    //     debugger
-    //     setFile(URL.createObjectURL(e.target.files[0]));
-    //     console.log(file);
-    // };
-
-    // const onEdit = () => {
-    //     inputFile.current.click();
-    // };
-
-    const onDelete = () => {
-        setFile("");
-    };
-
-    const change = (e) => {
-        const file = e.target.files[0];
-
-    }
-
-    // const submit = async (e) => {
-    //     e.preventDefault();
-    //     let res = Axios.post(url, book);
-    //     if (res.data) {
-    //         console.log(res.data)
-    //     }
-    // }
     const {
         register,
         handleSubmit,
-        reset,
         formState: { errors },
     } = useForm();
 
     const onSubmit = (data) => {
         const formData = new FormData();
-        // formData.append("name", data.name);
         formData.append("file", selectedFile);
         formData.append("author", data.author);
         formData.append("availability", data.availability);
@@ -123,15 +71,9 @@ const AddBook = () => {
             .post(url, formData)
             .then((res) => {
                 setFile(res.data);
-                // alert("File Upload success");
             })
             .catch((err) => alert("File Upload Error"));
     };
-    // const onSubmit = async (data) => {
-    //     // let newData = arrayToFormData(data);
-    //     // let res = await Axios.post(url, newData);
-    //     console.log(data);
-    // }
     return (
         <>
             <div className="flex h-screen flex-wrap content-center justify-center">
@@ -143,7 +85,6 @@ const AddBook = () => {
                             return getField({ field, register, errors });
                         })}
                         <br />
-                        {/* <input ref={register} type="file" name="file" onChange={change} /> */}
                         <FileUpload
                             setFile={setFile}
                             onFileSelectSuccess={(file) => setSelectedFile(file)}
@@ -156,20 +97,6 @@ const AddBook = () => {
                             :
                             null
                         }
-                        {/* <FileInput
-                            refInput={inputFile}
-                            register={register}
-                            name="file"
-                            onChange={handleFile}
-                            errors={errors} /> */}
-
-                        {/* <FileInput
-                            name="file"
-                            register={register}
-                            errors={errors}
-                            onChange={handleFile}
-                            refInput={inputFile}
-                        /> */}
                         <br />
                         <Button
                             type="submit"

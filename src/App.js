@@ -5,7 +5,7 @@ import Content from './Layout/Content';
 
 function App() {
   return (
-    <div className="app">
+    <div className="App">
       <div className="grid grid-cols-12">
         <div className="col-span-12">
           <Header />
@@ -13,7 +13,7 @@ function App() {
         <div className="content col-span-12 px-2">
           <Content />
         </div>
-        <div className="col-span-12">
+        <div className="content col-span-12 ">
           <Footer />
         </div>
       </div>
