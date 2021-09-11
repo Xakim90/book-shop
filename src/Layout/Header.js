@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import { ROUTES } from "../routes/routes";
-import styles from "./Layout.module.css";
 import "./main.css";
 import Currency from "../components/Currency";
 import SearchIcon from '@material-ui/icons/Search';
 import PersonIcon from '@material-ui/icons/Person';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 const Header = (props) => {
     const [hidden, setHidden] = useState("");
@@ -33,28 +31,29 @@ const Header = (props) => {
     }
 
     return (
-        <div className={styles.main + " h-24"}>
+        <div className=" h-64">
             <br />
-            <div className="flex justify-between">
-                <div>
+            <div className="grid grid-cols-12 place-items-center">
+                <div className="col-span-3 justify-items-start">
                     <Currency />
                 </div>
-                <div>
+                <div className="col-span-6">
                     <img className="w-24" src="//cdn.shopify.com/s/files/1/0880/2454/files/BookShop_Flat_x360.jpg?v=1534218298" alt="" />
                 </div>
-                <div>
+                <div className="col-span-3">
                     <SearchIcon onClick={toggleInput} id="searchIcon1" className={"mr-6 cursor-pointer " + hidden} />
                     <PersonIcon onClick={toggleAccount} id="personIcon1" className={"cursor-pointer " + hidden} />
-                    <input id="searchInput1" className={"border  border-black " + hidden2} type="search" />
+                    <input id="searchInput1" className={"border border-black " + hidden2} type="search" />
                     <div className={hidden3 + " inline"}>
                         <Link className="text-bold" to="login">Log in </ Link>
                         or
                         <Link className="text-bold" to="register"> Sign up</Link>
                     </div>
-                    <span onClick={toggleX} className={"text-3xl cursor-pointer " + hidden2}>&times;</span>
-                    <span onClick={toggleX2} className={"text-2xl cursor-pointer " + hidden3}>&times;</span>
+                    <span onClick={toggleX} className={"text-3xl cursor-pointer " + hidden2}>&times; </span>
+                    <span onClick={toggleX2} className={"text-2xl cursor-pointer " + hidden3}>&times; </span>
                 </div>
             </div>
+
             <br />
             <br />
             <div className="flex justify-center my-auto">
@@ -66,20 +65,17 @@ const Header = (props) => {
                                 <div key={index + route} className={route.icon ? "myClass2" : ""}>
                                     <Link
                                         to={route.url}>
-                                        <span
-                                            // onMouseOver={route.icon ? () => setMore(true) : null}
-                                            // onMouseOut={route.icon ? () => setMore(false) : null}
-                                            className="no-underline text-sm ">
+                                        <span className="no-underline text-sm ">
                                             {route.name}
                                             {route.icon ?
-                                                <span ><ExpandMoreIcon fontSize="small" className="myClass3"/></span> : ""
+                                                <span ><ExpandMoreIcon fontSize="small" className="myClass3" /></span> : ""
                                             }
                                         </span>
                                     </Link>
                                     {
                                         route.icon ?
                                             (
-                                                <div className="relative myClass">
+                                                <div className="relative shadow-2xl myClass">
                                                     <div className="absolute p-3">
                                                         <div>Sirojiddin</div>
                                                         <div>Zuxriddinov</div>
@@ -97,6 +93,7 @@ const Header = (props) => {
                 </div>
             </div>
         </div>
+
 
         // <div className="grid grid-cols-12 h-20">
         //     <div className="col-span-7">

@@ -18,21 +18,26 @@ function Sirojiddin() {
 
     return (
         <div className={Styles.center}>
-            <h1 className="text-xl font-bold">Registration</h1>
-            <form onSubmit={handleSubmit(onsubmit)}>
-                <h1 className="font-serif">email</h1>
-                <input
-                    className="bg-gray-300 h-10 w-60 rounded-xl"
-                    {...register('email')}
-                />
-                <h1 className="font-serif">password</h1>
-                <input
-                    className="bg-gray-300 h-10 w-60 rounded-xl"
-                    {...register('password')}
-                /><hr />
-                <br />
-                <input type="submit" className="w-60 h-10 bg-blue-400 rounded-xl" />
-            </form>
+            <div className="border-2 border-gray-200 h-5/6 w-72 rounded-xl bg-gray-300 shadow-2xl">
+                <div className="ml-6 my-5">
+                    <h1 className="text-xl font-bold">Registration</h1>
+                    <form onSubmit={handleSubmit(onsubmit)}>
+                        <h1 className="font-serif shadow-xl">email</h1>
+                        <input
+                            className="h-10 w-60 rounded-xl"
+                            {...register('email')}
+                        />
+                        <h1 className="font-serif shadow-2xl">password</h1>
+                        <input
+                            className="h-10 w-60 rounded-xl"
+                            {...register('password')}
+                        />
+                        <br />
+                        <br />
+                        <input type="submit" className="w-60 h-10 bg-blue-400 rounded-xl" />
+                    </form>
+                </div>
+            </div>
         </div>
     );
 }

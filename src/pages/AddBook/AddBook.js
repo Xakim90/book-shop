@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Axios from "axios";
 import { useForm } from "react-hook-form";
@@ -12,16 +11,19 @@ import FileInput from "../../components/FileInput";
 import { field_settings } from "./offer_fields";
 
 const getField = ({ field, register, errors }) => {
+
     switch (field.type) {
         case "text":
             return (
                 <label className="flex" key={field.name}>
                     <span className="label_title">{field.label}</span>
-                    <input
-                        className="primary"
-                        name={field.name}
-                        {...register(field.name, { required: true })}
-                    />
+                    <div className="ml-10 text-left">
+                        <input
+                            className=""
+                            name={field.name}
+                            {...register(field.name, { required: true })}
+                        />
+                    </div>
                     {errors[field.name] && (
                         <span className="input_error">Обязательно поле</span>
                     )}
@@ -42,7 +44,6 @@ const getField = ({ field, register, errors }) => {
                             placeholder={field.label}
                         />
                     </div>
-
                 </label>
             );
         // case "file":

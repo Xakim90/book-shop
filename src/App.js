@@ -1,19 +1,20 @@
 import './App.css';
 import Header from './Layout/Header';
-import Sidebar from './Layout/Sidebar';
+import Footer from './Layout/Footer';
 import Content from './Layout/Content';
 
 function App() {
   return (
-    <div className="app">
+    <div className="App">
       <div className="grid grid-cols-12">
         <div className="col-span-12">
-          <div className="h-64">
-            <Header />
-          </div>
-          <div className="px-3">
-            <Content />
-          </div>
+          <Header />
+        </div>
+        <div className="content col-span-12 px-2 h-screen">
+          <Content />
+        </div>
+        <div className="col-span-12">
+          <Footer />
         </div>
       </div>
     </div>

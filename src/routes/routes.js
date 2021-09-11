@@ -1,4 +1,3 @@
-import AdbIcon from '@material-ui/icons/Adb';
 import Test from "../pages/Test";
 import Sardor from "../pages/Sardor";
 import Sirojiddin from "../pages/Sirojiddin";
@@ -46,12 +45,12 @@ export const ROUTES = [
     {
         name: "COLLABORATIONS",
         icon: "^",
-        url: "/addbook",
+        url: "/collaborations",
         component: () => <AddBook />,
     },
     {
         name: "BLOG",
-        url: "/addbook",
+        url: "/blog",
         component: () => <AddBook />,
         exact: false
     },
