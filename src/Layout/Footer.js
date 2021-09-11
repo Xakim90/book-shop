@@ -1,19 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ROUTES2 } from "../routes/routes2";
 import { Link } from 'react-router-dom';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import { useForm } from 'react-hook-form';
 
-function Footer() {
+const Footer = (props) => {
 
     const {
         register,
         handleSubmit,
     } = useForm({ mode: 'onChange' });
 
-    const onsubmit = data => console.log('Отправлено:', data);
-
+  
+    const onSubmit = data => console.log(data);
+    
 
     return (
         <div>
@@ -61,7 +62,7 @@ function Footer() {
                     <div className="">SUBSCRIBE</div>
                     <div className="font-normal text-sm my-3">Stay informed about events and product launches</div>
                     <div >
-                        <form onSubmit={handleSubmit(onsubmit)}>
+                        <form onSubmit={handleSubmit(onSubmit)}>
                             <input
                                 className="p-4 text-xs tracking-widest border-black"
                                 placeholder="Your Email"

@@ -24,12 +24,12 @@ function Sirojiddin() {
                     <form onSubmit={handleSubmit(onsubmit)}>
                         <h1 className="font-serif shadow-xl">email</h1>
                         <input
-                            className="h-10 w-60 rounded-xl"
+                            className="h-10 w-60 rounded-xl p-2"
                             {...register('email')}
                         />
                         <h1 className="font-serif shadow-2xl">password</h1>
                         <input
-                            className="h-10 w-60 rounded-xl"
+                            className="h-10 w-60 rounded-xl p-2"
                             {...register('password')}
                         />
                         <br />

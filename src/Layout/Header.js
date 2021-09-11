@@ -74,7 +74,6 @@ const Header = (props) => {
                                                 <span>
                                                     {
                                                         !more ? <ExpandMoreIcon /> : <ExpandLessIcon />
-                                                        
                                                     }
                                                 </span> : ""
                                             }
@@ -97,7 +96,7 @@ const Header = (props) => {
                                                     )
                                                     : null
                                                 : null
-                                            }
+                                        }
                                     </Link>
                                 </div>
                             )
