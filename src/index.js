@@ -6,7 +6,7 @@ import App from './App';
 import { BrowserRouter as Router } from "react-router-dom";
 import store from "./redux/redux-store";
 import AxiosConfig from "./config/AxiosConfig";
-import { connect, Provider } from "react-redux";
+import { Provider } from "react-redux";
 
 ReactDOM.render(
   <Router>

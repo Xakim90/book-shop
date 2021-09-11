@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import Axios from 'axios';
 import instance from '../api/instance';
 
 const FileUpload = ({ onFileSelectSuccess, onFileSelectError, setFile }) => {
@@ -24,7 +23,6 @@ const FileUpload = ({ onFileSelectSuccess, onFileSelectError, setFile }) => {
 
     return (
         <div className="file-uploader">
-            {/* <img src={ } /> */}
             <input type="file" onChange={handleFileInput} />
             <br />
             <button

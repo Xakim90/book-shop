@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 
 const Currency = (props) => {
-    const [currency, setCurrency] = useState("usd");
+    const [setCurrency] = useState("usd");
 
     const handleChange = (e) => {
-        console.log(e.target.value)
+        // console.log(e.target.value)
+        setCurrency(e.target.value)
     }
 
     return (
-        <div className="border-black border">
+        <div className="border-gray-400 border text-sm font-mono">
             <select onChange={handleChange}>
                 <option value="usd">USD</option>
                 <option value="eur">EUR</option>
