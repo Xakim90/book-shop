@@ -10,7 +10,7 @@ function App() {
         <div className="col-span-12">
           <Header />
         </div>
-        <div className="content col-span-12 px-2">
+        <div className="content col-span-12 px-2 h-screen">
           <Content />
         </div>
         <div className="content col-span-12 ">

@@ -54,7 +54,6 @@ const Header = (props) => {
             </div>
             <br />
             <br />
-            <br />
             <div className="flex justify-center my-auto">
 
                 <div className="grid grid-cols-8 gap-4 cursor-pointer">

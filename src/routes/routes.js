@@ -43,11 +43,10 @@ export const ROUTES = [
         exact: false
     },
     {
-        name: "COLLABORATI",
+        name: "COLLABORATIONS",
         icon: "^",
         url: "/collabaration",
         component: () => <AddBook />,
-        exact: false
     },
     {
         name: "BLOG",

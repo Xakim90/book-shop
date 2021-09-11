@@ -7,13 +7,13 @@ import { ROUTES2 } from "../routes/routes2";
 const Content = (props) => {
     const newRoutes = ROUTES.concat(ROUTES2);
     return (
-        <>
+        <div>
             <Switch>
                 {newRoutes.map((route, index) => {
                     return <Route {...route} path={route.url} key={index} component={route.component} />
                 })}
             </Switch>
-        </>
+        </div>
     )
 }
 export default Content;
