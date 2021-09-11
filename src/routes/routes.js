@@ -38,20 +38,20 @@ export const ROUTES = [
     },
     {
         name: "APPAREL",
-        url: "/addbook",
+        url: "/apparel",
         component: () => <AddBook />,
         exact: false
     },
     {
-        name: "COLLABORATI",
+        name: "COLLABORATIONS",
         icon: "^",
-        url: "/addbook",
+        url: "/collaborations",
         component: () => <AddBook />,
         exact: false
     },
     {
         name: "BLOG",
-        url: "/addbook",
+        url: "/blog",
         component: () => <AddBook />,
         exact: false
     },

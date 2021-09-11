@@ -13,7 +13,7 @@ function Footer() {
         handleSubmit,
     } = useForm({ mode: 'onChange' });
 
-    const onsubmit = data => console.log('Отправлено:', data);
+    const onSubmit = data => console.log('Отправлено:', data);
 
 
     return (
@@ -54,7 +54,6 @@ function Footer() {
                                     <Link to={route.url}>
                                         <span className="text-sm font-mono">
                                             {route.name}
-                                            {route.component}
                                         </span>
                                     </Link>
                                 </div>
@@ -69,7 +68,7 @@ function Footer() {
                     </div>
                     <br />
                     <div>
-                        <form onSubmit={handleSubmit(onsubmit)}>
+                        <form onSubmit={handleSubmit(onSubmit)}>
                             <input
                                 className="p-2 text-xs tracking-widest border-black"
                                 placeholder="Your Email"

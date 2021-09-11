@@ -6,13 +6,11 @@ import Currency from "../components/Currency";
 import SearchIcon from '@material-ui/icons/Search';
 import PersonIcon from '@material-ui/icons/Person';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 const Header = (props) => {
     const [hidden, setHidden] = useState("");
     const [hidden2, setHidden2] = useState("hidden");
     const [hidden3, setHidden3] = useState("hidden");
-    const [more, setMore] = useState(false)
 
     const toggleInput = () => {
         setHidden("invisible");
@@ -32,7 +30,7 @@ const Header = (props) => {
     }
 
     return (
-        <div>
+        <div className="h-64">
             <br />
             <div className="grid grid-cols-12 place-items-center">
                 <div className="col-span-3 justify-items-start">
@@ -60,38 +58,36 @@ const Header = (props) => {
             <br />
             <div className="flex justify-center my-auto">
 
-                <div className="grid grid-cols-8 gap-4 cursor-pointer h-24">
+                <div className="grid grid-cols-8 gap-4 cursor-pointer">
                     {
                         ROUTES.map((route, index) => {
                             return (
-                                <div key={index + route}>
+                                <div key={index + route} className={route.icon ? "myClass2" : ""}>
                                     <Link
                                         to={route.url}>
                                         <span
-                                            onMouseOver={route.icon ? () => setMore(true) : null}
-                                            onMouseOut={route.icon ? () => setMore(false) : null}
+                                            // onMouseOver={route.icon ? () => setMore(true) : null}
+                                            // onMouseOut={route.icon ? () => setMore(false) : null}
                                             className="no-underline text-sm">
                                             {route.name}
                                             {route.icon ?
-                                                <span>
-                                                    {
-                                                        !more ? <ExpandMoreIcon /> : <ExpandLessIcon />
-                                                    }
-                                                </span> : ""
+                                                <span><ExpandMoreIcon className="myClass3" fontSize="small" /></span> : ""
                                             }
                                         </span>
-                                        {
-                                            route.icon ?
-                                                more ? (
-                                                    <div>
-                                                        <div>
-                                                            Qalesan
-                                                        </div>
-                                                    </div>
-                                                ) : null
-                                                : null
-                                        }
                                     </Link>
+                                    {
+                                        route.icon ?
+                                            (
+                                                <div className="relative myClass shadow-2xl">
+                                                    <div className="absolute p-3">
+                                                        <div>Salom</div>
+                                                        <div>Salom</div>
+                                                        <div>Salom</div>
+                                                    </div>
+                                                </div>
+                                            )
+                                            : null
+                                    }
                                 </div>
                             )
                         })
