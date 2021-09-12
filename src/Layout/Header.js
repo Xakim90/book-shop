@@ -74,11 +74,11 @@ const Header = (props) => {
                                     {
                                         route.icon ?
                                             (
-                                                <div className="relative shadow-2xl myClass bg-white">
-                                                    <div className="absolute p-3">
-                                                        <div>Salom</div>
-                                                        <div>Salom</div>
-                                                        <div>Salom</div>
+                                                <div className="relative myClass">
+                                                    <div className="absolute p-3 bg-white shadow-2xl rounded text-center">
+                                                        <Link to={route.urll}>
+                                                            <div className="w-48">{route.name1}</div>
+                                                        </Link>
                                                     </div>
                                                 </div>
                                             )
@@ -90,6 +90,8 @@ const Header = (props) => {
                     }
                 </div>
             </div>
+            <br />
+            <hr />
         </div>
     )
 }

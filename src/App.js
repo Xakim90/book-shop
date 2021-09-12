@@ -10,10 +10,10 @@ function App() {
         <div className="col-span-12">
           <Header />
         </div>
-        <div className="content col-span-12 px-2 h-screen">
+        <div className="col-span-12 px-2">
           <Content />
         </div>
-        <div className="content col-span-12 ">
+        <div className="col-span-12 ">
           <Footer />
         </div>
       </div>

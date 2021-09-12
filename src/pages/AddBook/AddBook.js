@@ -75,7 +75,7 @@ const AddBook = () => {
     };
     return (
         <>
-            <div className="flex h-screen flex-wrap content-center justify-center">
+            <div className="content flex h-screen flex-wrap content-center justify-center">
                 <div>
                     <form onSubmit={handleSubmit(onSubmit)} noValidate autoComplete="off">
                         <p className="text-center font-bold text-lg">Registratsiya</p>

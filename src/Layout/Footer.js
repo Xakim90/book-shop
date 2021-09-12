@@ -22,7 +22,7 @@ const Footer = (props) => {
         <div>
             <div className={styles.footer + " grid grid-cols-12 text-left"}>
                 <div className="col-span-4 m-10">
-                    <h1 className="font-serif">B O O K / S H O P</h1>
+                    <i className="font-serif">B O O K / S H O P</i>
                     <div>
                         <br />
                         <div className="text-sm font-mono">
@@ -63,7 +63,7 @@ const Footer = (props) => {
                         })}
                 </div>
                 <div className="col-span-4 m-10">
-                    <div className="font-serif">SUBSCRIBE</div>
+                    <i className="font-serif">SUBSCRIBE</i>
                     <br />
                     <div className="text-sm font-mono">
                         Stay informed about events and product launches
