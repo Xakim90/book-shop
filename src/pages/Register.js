@@ -27,7 +27,11 @@ const Register = () => {
     }
     return (
         <>
+<<<<<<< HEAD
             <div className="flex h-screen flex-wrap content-center content justify-center">
+=======
+            <div className="flex h-screen flex-wrap content-center justify-center content">
+>>>>>>> e916ee8753cfe191afcbbcca326410793aa30c2e
                 <div>
                     <form onSubmit={submit} noValidate autoComplete="off">
                         <p className="text-center font-bold text-lg">Registratsiya</p>

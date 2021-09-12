@@ -46,10 +46,18 @@ export const ROUTES = [
     {
         name: "COLLABORATIONS",
         icon: "^",
+<<<<<<< HEAD
         url: "/collaboration",
         urll: "/books",
         component: () => <AddBook />,
         name1: "LIBRAIRIE HAYDEE",
+=======
+        url: "/collaborations",
+        urll: "/books",
+        component: () => <AddBook />,
+        name1: "LIBRAIRIE HAYDEE",
+        //name2: "PENGUIN COLLECTORS SOCIETY",
+>>>>>>> e916ee8753cfe191afcbbcca326410793aa30c2e
     },
     {
         name: "BLOG",
@@ -57,10 +65,19 @@ export const ROUTES = [
         component: () => <AddBook />,
         exact: false
     },
+<<<<<<< HEAD
     {
         name: "CART",
         url: "/cart",
         component: () => <Cart />,
         exact: false
     },
+=======
+    // {
+    //     name: "CART",
+    //     url: "/cart",
+    //     component: () => <Cart />,
+    //     exact: false
+    // },
+>>>>>>> e916ee8753cfe191afcbbcca326410793aa30c2e
 ]

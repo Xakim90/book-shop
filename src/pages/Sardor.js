@@ -13,7 +13,11 @@ export default function Sardor() {
     const onSubmit = data => console.log('Отправлено:', data)
     
     return (
+<<<<<<< HEAD
         <div className={Styles.commandDiv + " content"}>
+=======
+        <div className={Styles.commandDiv + " content"} >
+>>>>>>> e916ee8753cfe191afcbbcca326410793aa30c2e
             <h1 className="text-xl font-bold text-center">Registration</h1>
             <form onSubmit={handleSubmit(onSubmit)}>
                 {

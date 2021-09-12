@@ -75,9 +75,15 @@ const Header = (props) => {
                                         route.icon ?
                                             (
                                                 <div className="relative myClass">
+<<<<<<< HEAD
                                                     <div className="absolute p-3 shadow-2xl">
                                                         <Link to={route.urll}>
                                                             <div>{route.name1}</div>
+=======
+                                                    <div className="absolute p-3 bg-white shadow-2xl rounded text-center">
+                                                        <Link to={route.urll}>
+                                                            <div className="w-48">{route.name1}</div>
+>>>>>>> e916ee8753cfe191afcbbcca326410793aa30c2e
                                                         </Link>
                                                     </div>
                                                 </div>
@@ -91,9 +97,49 @@ const Header = (props) => {
                 </div>
             </div>
             <br />
+<<<<<<< HEAD
             <br />
+=======
+>>>>>>> e916ee8753cfe191afcbbcca326410793aa30c2e
             <hr />
         </div>
+
+        // <div className="grid grid-cols-12 h-20">
+        //     <div className="col-span-7">
+        //         <div className="grid grid-cols-7 mt-5">
+        //             <div className="col-span-2">
+        //                 <div className="flex justify-around">
+        //                     <a className="hover:text-yellow-400 font-bold text-xl" href="https://suusb.com">Store</a>
+        //                 </div>
+        //             </div>
+        //             <a className="hover:text-yellow-400 font-bold text-xl" href="https://suusb.com">Catalog</a>
+        //             <a className="hover:text-yellow-400 font-bold text-xl" href="https://suusb.com">Library</a>
+        //             <a className="hover:text-yellow-400 font-bold text-xl" href="https://suusb.com">Market</a>
+        //             <a className="hover:text-yellow-400 font-bold text-xl" href="https://suusb.com">Community</a>
+        //         </div>
+        //     </div>
+        //     <div className="col-span-5">
+        //         <div className="grid grid-cols-12">
+        //             <div className="col-span-5">
+
+        //             </div>
+        //             <div className="col-span-7">
+        //                 <div className="flex justify-around mt-5">
+        //                     <SearchIcon className="hover:text-yellow-400 cursor-pointer" />
+        //                     <HelpIcon className="hover:text-yellow-400 cursor-pointer" />
+        //                     <NotificationsIcon className="hover:text-yellow-400 cursor-pointer" />
+        //                     <ChatIcon className="hover:text-yellow-400 cursor-pointer" />
+        //                     <AccountCircleIcon className="hover:text-yellow-400 cursor-pointer" />
+        //                     <Link to="/">
+        //                         <span className="font-bold hover:text-yellow-400 cursor-pointer">
+        //                             Войти
+        //                         </span>
+        //                     </Link>
+        //                 </div>
+        //             </div>
+        //         </div>
+        //     </div>
+        // </div>
     )
 }
 export default Header;

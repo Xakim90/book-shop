@@ -12,3 +12,6 @@
     transform: rotateX(180deg);
     transition: all .5s ease;
 }
+.myEase:hover .myClass3 {
+    transition: all .5s ease;
+}

@@ -13,9 +13,15 @@ function App() {
         <div className="col-span-12 px-2">
           <Content />
         </div>
+<<<<<<< HEAD
       </div>
       <div className="col-span-12">
         <Footer />
+=======
+        <div className="col-span-12 ">
+          <Footer />
+        </div>
+>>>>>>> e916ee8753cfe191afcbbcca326410793aa30c2e
       </div>
     </div>
   );
