@@ -5,7 +5,7 @@
     display: none;
 }
 .myClass2:hover .myClass {
-    display: block;
+    display: block!important;
     transition: all .5s ease;
 }
 .myClass2:hover .myClass3 {

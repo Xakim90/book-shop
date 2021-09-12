@@ -17,7 +17,7 @@ function Sirojiddin() {
     console.log('возраст: ' + password);
 
     return (
-        <div className={Styles.center}>
+        <div className={Styles.center + " content"}>
             <div className="border-2 border-gray-200 h-5/6 w-72 rounded-xl bg-gray-300 shadow-2xl"> 
                 <div className="my-10">
                     <h1 className="text-xl font-bold">Registration</h1>

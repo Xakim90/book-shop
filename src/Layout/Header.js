@@ -56,7 +56,7 @@ const Header = (props) => {
             <br />
             <div className="flex justify-center my-auto">
 
-                <div className="grid grid-cols-8 gap-4 cursor-pointer">
+                <div className="grid grid-cols-9 gap-2 cursor-pointer text-sm font-mono">
                     {
                         ROUTES.map((route, index) => {
                             return (
@@ -74,11 +74,11 @@ const Header = (props) => {
                                     {
                                         route.icon ?
                                             (
-                                                <div className="relative shadow-2xl myClass bg-white">
-                                                    <div className="absolute p-3">
-                                                        <div>Salom</div>
-                                                        <div>Salom</div>
-                                                        <div>Salom</div>
+                                                <div className="relative myClass">
+                                                    <div className="absolute p-3 shadow-2xl">
+                                                        <Link to={route.urll}>
+                                                            <div>{route.name1}</div>
+                                                        </Link>
                                                     </div>
                                                 </div>
                                             )
@@ -90,6 +90,9 @@ const Header = (props) => {
                     }
                 </div>
             </div>
+            <br />
+            <br />
+            <hr />
         </div>
     )
 }
