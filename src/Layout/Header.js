@@ -76,7 +76,7 @@ const Header = (props) => {
                                         route.icon ?
                                             (
                                                 <div className="relative shadow-2xl myClass">
-                                                    <div className="absolute p-3">
+                                                    <div className="absolute p-3 shadow-2xl bg-white rounded">
                                                         <div>Sirojiddin</div>
                                                         <div>Zuxriddinov</div>
                                                         <div>Zuxriddinov</div>
@@ -92,6 +92,9 @@ const Header = (props) => {
                     }
                 </div>
             </div>
+            <br />
+            <br />
+            <hr />
         </div>
 
 

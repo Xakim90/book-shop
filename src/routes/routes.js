@@ -4,6 +4,7 @@ import Sirojiddin from "../pages/Sirojiddin";
 import Register from "../pages/Register";
 import AddBook from "../pages/AddBook/AddBook";
 import Home from '../pages/Home';
+import Books from "../pages/Books";
 
 export const ROUTES = [
     {
@@ -14,8 +15,8 @@ export const ROUTES = [
     },
     {
         name: "BOOKS",
-        url: "/test",
-        component: () => <Test />,
+        url: "/books",
+        component: () => <Books />,
         exact: false
     },
     {
