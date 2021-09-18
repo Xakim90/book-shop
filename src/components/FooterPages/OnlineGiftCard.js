@@ -3,7 +3,7 @@ import React from 'react';
 const OnlineGiftCard = () => {
     return (
         <>
-            <h1>google</h1>
+            <h1 className="h-screen content">google</h1>
         </>
     )
 }

@@ -3,7 +3,7 @@ import React from 'react';
 const AboutUs = () => {
     return (
         <>
-            <h1>world</h1>
+            <h1 className="h-screen content">world</h1>
         </>
     )
 }

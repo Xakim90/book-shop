@@ -13,7 +13,7 @@ const TestHooks = (props) => {
             .then(json => {
                 setPosts(json)
                 setLoading(false)
-                console.log(json)
+                console.log(res)
             })
     }
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Currency = (props) => {
-    const [currency, setCurrency] = useState("usd");
+    const [setCurrency] = useState("usd");
 
     const handleChange = (e) => {
         // console.log(e.target.value)

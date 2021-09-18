@@ -6,21 +6,23 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import { useForm } from 'react-hook-form';
 import styles from "./Layout.module.css"
 
-function Footer() {
+const Footer = (props) => {
 
     const {
         register,
         handleSubmit,
     } = useForm({ mode: 'onChange' });
 
-    const onsubmit = data => console.log('Отправлено:', data);
-
+  
+    const onEnter = data => console.log('Отправлено:', data);
+        // axios.get("home/my", data)
+    
 
     return (
         <div>
             <div className={styles.footer + " grid grid-cols-12 text-left"}>
                 <div className="col-span-4 m-10">
-                    <h1 className="font-serif">B O O K  /  S H O P</h1>
+                    <i className="font-serif">B O O K / S H O P</i>
                     <div>
                         <br />
                         <div className="text-sm font-mono">
@@ -52,9 +54,8 @@ function Footer() {
                             return (
                                 <div key={index + route}>
                                     <Link to={route.url}>
-                                        <span className="text-sm font-mono">
+                                        <span className="text-sm font-mono h-96">
                                             {route.name}
-                                            {route.component}
                                         </span>
                                     </Link>
                                 </div>
@@ -62,14 +63,14 @@ function Footer() {
                         })}
                 </div>
                 <div className="col-span-4 m-10">
-                    <div className="font-serif">SUBSCRIBE</div>
+                    <i className="font-serif">SUBSCRIBE</i>
                     <br />
                     <div className="text-sm font-mono">
                         Stay informed about events and product launches
                     </div>
                     <br />
                     <div>
-                        <form onSubmit={handleSubmit(onsubmit)}>
+                        <form onSubmit={handleSubmit(onEnter)}>
                             <input
                                 className="p-2 text-xs tracking-widest border-black"
                                 placeholder="Your Email"

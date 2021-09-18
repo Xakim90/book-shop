@@ -136,7 +136,7 @@ const TestState = (props) => {
                     images.map((item, index) => {
                         return (
                             <div className="w-1/4 p-2 bg-gray-300 rounded">
-                                <img src={item.url} className="h-48 w-full" key={index}/>
+                                <img alt="Rasm" src={item.url} className="h-48 w-full" key={index}/>
                             </div>
                         )
                     })

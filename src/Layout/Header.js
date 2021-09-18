@@ -5,13 +5,12 @@ import "./main.css";
 import Currency from "../components/Currency";
 import SearchIcon from '@material-ui/icons/Search';
 import PersonIcon from '@material-ui/icons/Person';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 const Header = (props) => {
     const [hidden, setHidden] = useState("");
     const [hidden2, setHidden2] = useState("hidden");
     const [hidden3, setHidden3] = useState("hidden");
-    const [more, setMore] = useState(false);
 
     const toggleInput = () => {
         setHidden("invisible");
@@ -31,7 +30,7 @@ const Header = (props) => {
     }
 
     return (
-        <div className=" h-64">
+        <div className="h-64">
             <br />
             <div className="grid grid-cols-12 place-items-center">
                 <div className="col-span-3 justify-items-start">
@@ -53,34 +52,33 @@ const Header = (props) => {
                     <span onClick={toggleX2} className={"text-2xl cursor-pointer " + hidden3}>&times; </span>
                 </div>
             </div>
-
             <br />
             <br />
             <div className="flex justify-center my-auto">
 
-                <div className="grid grid-cols-8 gap-4 cursor-pointer">
+                <div className="grid grid-cols-9 gap-2 cursor-pointer text-sm font-mono">
                     {
                         ROUTES.map((route, index) => {
                             return (
                                 <div key={index + route} className={route.icon ? "myClass2" : ""}>
                                     <Link
                                         to={route.url}>
-                                        <span className="no-underline text-sm ">
+                                        <span
+                                            className="no-underline text-sm">
                                             {route.name}
                                             {route.icon ?
-                                                <span ><ExpandMoreIcon fontSize="small" className="myClass3" /></span> : ""
+                                                <span><ExpandLessIcon fontSize="small" className="myClass3" /></span> : ""
                                             }
                                         </span>
                                     </Link>
                                     {
                                         route.icon ?
                                             (
-                                                <div className="relative shadow-2xl myClass">
-                                                    <div className="absolute p-3 shadow-2xl bg-white rounded">
-                                                        <div>Sirojiddin</div>
-                                                        <div>Zuxriddinov</div>
-                                                        <div>Zuxriddinov</div>
-                                                        <div>Zuxriddinov</div>
+                                                <div className="relative myClass">
+                                                    <div className="absolute p-3 shadow-2xl">
+                                                        <Link to={route.urll}>
+                                                            <div>{route.name1}</div>
+                                                        </Link>
                                                     </div>
                                                 </div>
                                             )
@@ -96,7 +94,6 @@ const Header = (props) => {
             <br />
             <hr />
         </div>
-
 
         // <div className="grid grid-cols-12 h-20">
         //     <div className="col-span-7">

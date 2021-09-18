@@ -1,10 +1,10 @@
-import Test from "../pages/Test";
 import Sardor from "../pages/Sardor";
 import Sirojiddin from "../pages/Sirojiddin";
 import Register from "../pages/Register";
 import AddBook from "../pages/AddBook/AddBook";
 import Home from '../pages/Home';
 import Books from "../pages/Books";
+import Cart from "../components/Cart";
 
 export const ROUTES = [
     {
@@ -39,20 +39,28 @@ export const ROUTES = [
     },
     {
         name: "APPAREL",
-        url: "/addbook",
+        url: "/apparel",
         component: () => <AddBook />,
         exact: false
     },
     {
         name: "COLLABORATIONS",
         icon: "^",
-        url: "/collaborations",
+        url: "/collaboration",
+        urll: "/books",
         component: () => <AddBook />,
+        name1: "LIBRAIRIE HAYDEE",
     },
     {
         name: "BLOG",
         url: "/blog",
         component: () => <AddBook />,
+        exact: false
+    },
+    {
+        name: "CART",
+        url: "/cart",
+        component: () => <Cart />,
         exact: false
     },
 ]

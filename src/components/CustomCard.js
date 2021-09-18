@@ -1,15 +1,26 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-const CustomCard = ({ img1, img2, title, narx }) => {
+const CustomCard = ({ img, img2, title, price, doublePhoto = true }) => {
     const [photo, setPhoto] = useState(false);
+
     return (
         <div>
-            <img className="w-full h-96 img-fluid cursor-pointer"
-                onMouseOver={() => setPhoto(true)}
-                onMouseOut={() => setPhoto(false)}
-                src={!photo ? img1 : img2} alt="" />
+            {
+                doublePhoto ? (
+                    <img
+                        className="w-full h-96 img-fluid cursor-pointer"
+                        onMouseOver={() => setPhoto(true)}
+                        onMouseOut={() => setPhoto(false)}
+                        src={!photo ? img : img2}
+                        alt="Book"
+                    />
+                ) : (
+                    <img src={img} alt="" />
+                )
+            }
+
             <h1 className="text-xl">{title}</h1>
-            <p>{narx}</p>
+            <h1>{price}</h1>
         </div>
     )
 }
