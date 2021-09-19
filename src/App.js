@@ -13,9 +13,9 @@ function App() {
         <div className="col-span-12 px-2">
           <Content />
         </div>
-        <div className="col-span-12 ">
-          <Footer />
-        </div>
+      </div>
+      <div className="col-span-12">
+        <Footer />
       </div>
     </div>
   );

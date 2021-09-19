@@ -5,6 +5,7 @@ import AddBook from "../pages/AddBook/AddBook";
 import Home from '../pages/Home';
 import Books from "../pages/Books";
 import Cart from "../components/Cart";
+import Product from "../components/Product";
 
 export const ROUTES = [
     {
@@ -46,11 +47,10 @@ export const ROUTES = [
     {
         name: "COLLABORATIONS",
         icon: "^",
-        url: "/collaborations",
+        url: "/collaboration",
         urll: "/books",
         component: () => <AddBook />,
         name1: "LIBRAIRIE HAYDEE",
-        //name2: "PENGUIN COLLECTORS SOCIETY",
     },
     {
         name: "BLOG",
@@ -62,6 +62,11 @@ export const ROUTES = [
         name: "CART",
         url: "/cart",
         component: () => <Cart />,
+        exact: false
+    },
+    {
+        url: "/product/:id?",
+        component: () => <Product />,
         exact: false
     },
 ]

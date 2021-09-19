@@ -1,11 +1,22 @@
-
 import React, { useState, useEffect } from "react";
+// import RecipeReviewCard from "../components/RecipeReviewCard";
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { Link, useParams } from "react-router-dom";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+// import InputSpinner from "../components/InputSpinner";
 import axios from "axios";
+
+// const useStyles = makeStyles((theme) => ({
+//     root: {
+//         '& > *': {
+//             margin: theme.spacing(1),
+//             // width: '25ch',
+//         },
+//     },
+// }));
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -16,9 +27,17 @@ const useStyles = makeStyles((theme) => ({
 
 const Cart = (props) => {
     const [product, setProduct] = useState();
-    const [count] = useState(1);
+    const [count, setCount] = useState(1);
     const classes = useStyles();
     const { id } = useParams();
+
+    // handleClick() {
+    //     try {
+    //         // Делаем что-то, что сгенерирует ошибку
+    //     } catch (error) {
+    //         this.setState({ error });
+    //     }
+    // }
 
     let url = "https://laravel-react-eshop.herokuapp.com"
 
@@ -41,6 +60,7 @@ const Cart = (props) => {
         }
     }, [])
 
+    // console.log(props)
     return (
         <div>
             <div className="flex justify-start bg-gray-100 py-4 text-gray-900">
@@ -88,6 +108,13 @@ const Cart = (props) => {
                                         </div>
                                     </div>
                                     <div className="col-span-3">
+                                        {/* <div className="input-spinner">
+                                            <InputSpinner
+                                                setCount={setCount}
+                                                count={count}
+                                                product={product.price}
+                                            />
+                                        </div> */}
                                     </div>
                                     <div className="col-span-3 pt-6">
                                         <span className="text-gray-600 text-2xl font-semibold">
@@ -95,15 +122,13 @@ const Cart = (props) => {
                                         </span>
                                     </div>
                                     <div className="col-span-1 px-2 py-1">
-                                        <div className="grid grid-cols-3 h-14 text-gray-300 border cursor-pointer rounded-lg text-4xl">
-                                            <div></div>
-                                            <div>&times;</div>
-                                            <div></div>
+                                        <div className="mt-3 w-14 text-gray-300 border cursor-pointer rounded-lg pb-2 text-4xl">
+                                            &times;
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-span-1 border border-gray-200 rounded-lg mx-2">
+                            <div className="col-span-1 border border-gray-200 rounded-lg">
                                 <form>
                                     <TextField
                                         id="outlined-basic"
@@ -118,6 +143,13 @@ const Cart = (props) => {
                                     >
                                         OK
                                     </Button>
+                                    {/* <Button
+                                        variant="contained"
+                                        size="small"
+                                        className="h-8"
+                                        color="secondary">
+                                        OK
+                                    </Button> */}
                                 </form>
                                 <br />
                                 <div className="grid grid-cols-2 pl-2">
