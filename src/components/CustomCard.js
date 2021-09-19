@@ -23,7 +23,7 @@ const CustomCard = ({ img, img2, title, price, id, doublePhoto = true }) => {
                         alt="Book"
                     />
                 ) : (
-                    <Link to={"/product/" + img.replace("https://", "")}>
+                    <Link to={"/product/" + img.replace("//", "")}>
                         <img className="cursor-pointer" src={img} alt="books" />
                     </Link>
                 )

@@ -3,8 +3,6 @@ import CustomCard from '../components/CustomCard';
 import { images } from '../routes/images';
 import { Link } from 'react-router-dom';
 
-
-
 const Home = () => {
     return (
         <div>
