@@ -15,7 +15,7 @@ const CustomCard = ({ img, img2, title, price, doublePhoto = true }) => {
                         alt="Book"
                     />
                 ) : (
-                    <img src={img} alt="" />
+                    <img className="cursor-pointer" src={img} alt="" />
                 )
             }
 
