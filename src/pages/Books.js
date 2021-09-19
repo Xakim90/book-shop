@@ -41,6 +41,7 @@ const Books = () => {
                                 img2={item.photo2}
                                 narx={item.price}
                                 title={item.name}
+                                doublePhoto={true}
                             />
                         </div>
 

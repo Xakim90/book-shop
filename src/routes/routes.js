@@ -58,10 +58,10 @@ export const ROUTES = [
         component: () => <AddBook />,
         exact: false
     },
-    // {
-    //     name: "CART",
-    //     url: "/cart",
-    //     component: () => <Cart />,
-    //     exact: false
-    // },
+    {
+        name: "CART",
+        url: "/cart",
+        component: () => <Cart />,
+        exact: false
+    },
 ]
