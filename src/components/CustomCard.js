@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const CustomCard = ({ img, img2, title, price, doublePhoto, name2 = true }) => {
+const CustomCard = ({ img, img2, title, price, doublePhoto = true }) => {
     const [photo, setPhoto] = useState(false);
 
     return (

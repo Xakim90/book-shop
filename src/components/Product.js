@@ -8,7 +8,9 @@ const Product = () => {
         <>
             <div className="grid grid-cols-12">
                 <div className="col-span-3">
-
+                    <div>
+                        <i></i>
+                    </div>
                 </div>
                 <div className="col-span-6">
                     <div>
