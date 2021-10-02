@@ -1,7 +1,6 @@
 import React from 'react'
 import CustomCard from '../components/CustomCard';
 import { images } from '../routes/images';
-import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
@@ -20,7 +19,6 @@ const Home = () => {
                 {
                     images.map((item, index) => {
                         return (
-                            <Link key={item+index} to="/cart">
                                 <CustomCard
                                     key={index}
                                     img={item.photo}
@@ -29,7 +27,6 @@ const Home = () => {
                                     price={item.price}
                                     doublePhoto={false}
                                 />
-                            </Link>
                         )
                     })
                 }

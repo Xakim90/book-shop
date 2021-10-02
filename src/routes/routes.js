@@ -4,7 +4,6 @@ import Register from "../pages/Register";
 import AddBook from "../pages/AddBook/AddBook";
 import Home from '../pages/Home';
 import Books from "../pages/Books";
-import Cart from "../components/Cart";
 import Product from "../components/Product";
 
 export const ROUTES = [
@@ -58,14 +57,9 @@ export const ROUTES = [
         component: () => <AddBook />,
         exact: false
     },
+    
     {
-        name: "CART",
-        url: "/cart",
-        component: () => <Cart />,
-        exact: false
-    },
-    {
-        url: "/product/:id?",
+        url: "/product/:url?/:title?/:price?",
         component: () => <Product />,
         exact: false
     },

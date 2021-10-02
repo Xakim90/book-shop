@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const CustomCard = ({ img, img2, title, price, id, doublePhoto = true }) => {
+const CustomCard = ({ img, img2, title, price, doublePhoto, name2 = true }) => {
     const [photo, setPhoto] = useState(false);
 
     return (
@@ -23,8 +23,8 @@ const CustomCard = ({ img, img2, title, price, id, doublePhoto = true }) => {
                         alt="Book"
                     />
                 ) : (
-                    <Link to={"/product/" + img.replace("//", "")}>
-                        <img className="cursor-pointer" src={img} alt="books" />
+                    <Link to={"/product/" + img.replace(/\//g, "|")}>
+                        <img className="cursor-pointer" src={img} alt="books" /> 
                     </Link>
                 )
             }

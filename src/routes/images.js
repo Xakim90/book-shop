@@ -10,6 +10,7 @@ export const images = [
         price: "$339.61 AUD",
         photo: "https://cdn.shopify.com/s/files/1/0880/2454/products/Albers-Cover_295x.jpg?v=1631218557",
         photo2: "https://cdn.shopify.com/s/files/1/0880/2454/products/Albers-TitleWEB_295x.jpg?v=1631218577",
+        name2: "London. Phaidon Press Limited. 2006. First Edition. Hardcover, clothbound w. pictorial cover dust jacket. Book condition: Fine. Jacket condition: Fine. 288pp. (ill. in colour & b/w). Josef Albers (1888-1976) has long been admired for his progressive vision as an artist and designer who blurred distinctions between fine and applied art, but rarely has his influence as a teacher been examined with such depth and detail. This book takes the reader from his first years at the pioneering but politically fraught Bauhaus; to his 1933 emigration to the United States, where he and his wife Anni became founding members and teachers at the experimental start-up Black Mountain College; and again to his 1950 appointment to head up Yale University's newly restructured Department of Design."
     },
     {
         name: "BRANCHES BY FRANK SAMPERI",
