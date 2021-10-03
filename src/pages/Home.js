@@ -2,7 +2,6 @@ import React from 'react'
 import CustomCard from '../components/CustomCard';
 import { images } from '../routes/images';
 
-
 const Home = () => {
     return (
         <div>
