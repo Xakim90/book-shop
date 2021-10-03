@@ -10,7 +10,7 @@ const Content = (props) => {
         <div>
             <Switch>
                 {newRoutes.map((route, index) => {
-                    return <Route {...route} path={route.url} key={index} component={route.component} />
+                    return <Route {...route} path={route.url} key={route + index} component={route.component} />
                 })}
             </Switch>
         </div>

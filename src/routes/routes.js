@@ -65,7 +65,7 @@ export const ROUTES = [
         exact: false
     },
     {
-        url: "/product/:id?",
+        url: "/product/:url?/:title?",
         component: () => <Product />,
         exact: false
     },

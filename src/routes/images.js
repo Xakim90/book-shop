@@ -3,7 +3,7 @@ export const images = [
         name: "BERLIN AND PHENOMENA BY WOLF VOSTELL",
         price: "$27.17 AUD",
         photo: "https://cdn.shopify.com/s/files/1/0880/2454/products/Vostell-Cover_295x.jpg?v=1631218505",
-        photo2: "https//cdn.shopify.com/s/files/1/0880/2454/products/Vostell-1WEB_295x.jpg?v=1631218523",
+        photo2: "https://cdn.shopify.com/s/files/1/0880/2454/products/Vostell-1WEB_295x.jpg?v=1631218523",
     },
     {
         name: "JOSEF ALBERS: TO OPEN EYES",
