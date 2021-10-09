@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import CartContext from "../Context/Cart/CartContext";
-
+ 
 const Product = () => {
     const { url } = useParams();
     const [count, setCount] = useState(1);
