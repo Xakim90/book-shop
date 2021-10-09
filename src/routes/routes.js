@@ -60,12 +60,13 @@ export const ROUTES = [
     },
     {
         name: "CART",
+        id: 1,
         url: "/cart",
         component: () => <Cart />,
         exact: false
     },
     {
-        url: "/product/:url?/:title?",
+        url: "/product/:url?",
         component: () => <Product />,
         exact: false
     },

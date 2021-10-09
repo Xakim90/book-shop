@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useParams } from "react-router-dom";
+import CartContext from "../Context/Cart/CartContext";
 
 const Product = () => {
     const { url } = useParams();
     const [count, setCount] = useState(1);
     // const url = id.replace(/\-/g, "/");
+    const { addToCart } = useContext(CartContext);
 
 
     return (
@@ -32,6 +34,7 @@ const Product = () => {
                         <button
                             type="button"
                             className="bg-black text-sm h-10 text-white px-10"
+                            onClick={() => addToCart(count)}
                         >
                             Add to cart
                         </button>

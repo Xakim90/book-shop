@@ -26,6 +26,7 @@ const Home = () => {
                                 title={item.name}
                                 price={item.price}
                                 doublePhoto={false}
+                                id={item.id}
                             />
                         )
                     })

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from 'react-router-dom';
 import { ROUTES } from "../routes/routes";
 import "./main.css";
@@ -6,11 +6,14 @@ import Currency from "../components/Currency";
 import SearchIcon from '@material-ui/icons/Search';
 import PersonIcon from '@material-ui/icons/Person';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+import CartContext from "../Context/Cart/CartContext";
 
 const Header = (props) => {
     const [hidden, setHidden] = useState("");
     const [hidden2, setHidden2] = useState("hidden");
     const [hidden3, setHidden3] = useState("hidden");
+
+    const { cartItem } = useContext(CartContext)
 
     const toggleInput = () => {
         setHidden("invisible");
@@ -66,6 +69,11 @@ const Header = (props) => {
                                         <span
                                             className="no-underline text-sm">
                                             {route.name}
+                                            {
+                                                route.id ? (
+                                                    cartItem.length > 0 && <span>({cartItem.slice(-1)})</span>
+                                                ) : null
+                                            }
                                             {route.icon ?
                                                 <span><ExpandLessIcon fontSize="small" className="myClass3" /></span> : ""
                                             }
@@ -88,6 +96,14 @@ const Header = (props) => {
                             )
                         })
                     }
+                    {/* <span>
+                        <Link to='/cart'>
+                            cart
+                            {
+                                cartItem.length > 0 && <div>{cartItem.length}</div>
+                            }
+                        </Link>
+                    </span> */}
                 </div>
             </div>
             <br />
