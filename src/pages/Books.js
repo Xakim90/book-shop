@@ -1,6 +1,5 @@
 import React from 'react';
 import CustomCard from '../components/CustomCard';
-import Product from '../components/Product'
 import { images } from '../routes/images';
 
 

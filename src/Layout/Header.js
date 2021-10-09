@@ -59,7 +59,7 @@ const Header = (props) => {
             <br />
             <div className="flex justify-center my-auto">
 
-                <div className="grid grid-cols-8 gap-2 cursor-pointer text-sm font-mono">
+                <div className="grid grid-cols-9 gap-2 cursor-pointer text-sm font-mono">
                     {
                         ROUTES.map((route, index) => {
                             return (
