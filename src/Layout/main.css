@@ -15,3 +15,12 @@
 .myEase:hover .myClass3 {
     transition: all .5s ease;
 }
+/* .out {
+    position: absolute;
+    top: 80px;
+    left: 240px;
+}
+.sold {
+    position: relative;
+
+} */

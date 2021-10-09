@@ -45,7 +45,7 @@ const Header = (props) => {
                 <div className="col-span-3">
                     <SearchIcon onClick={toggleInput} id="searchIcon1" className={"mr-6 cursor-pointer " + hidden} />
                     <PersonIcon onClick={toggleAccount} id="personIcon1" className={"cursor-pointer " + hidden} />
-                    <input id="searchInput1" className={"border border-black " + hidden2} type="search" />
+                    <input id="searchInput1" className={"border border-black " + hidden2} type="search"  />
                     <div className={hidden3 + " inline"}>
                         <Link className="text-bold" to="login">Log in </ Link>
                         or
@@ -59,7 +59,7 @@ const Header = (props) => {
             <br />
             <div className="flex justify-center my-auto">
 
-                <div className="grid grid-cols-9 gap-2 cursor-pointer text-sm font-mono">
+                <div className="grid grid-cols-8 gap-2 cursor-pointer text-sm font-mono">
                     {
                         ROUTES.map((route, index) => {
                             return (
@@ -110,6 +110,7 @@ const Header = (props) => {
             <br />
             <hr />
         </div>
+        
 
         // <div className="grid grid-cols-12 h-20">
         //     <div className="col-span-7">

@@ -9,6 +9,8 @@ const Product = () => {
     const { addToCart } = useContext(CartContext);
 
 
+    const { url, title } = useParams();
+    const [count, setCount] = useState(0);
     return (
         <div className="grid grid-cols-12 m-5">
             <div className="col-span-3 text-left">
