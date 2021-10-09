@@ -5,6 +5,7 @@ import AddBook from "../pages/AddBook/AddBook";
 import Home from '../pages/Home';
 import Books from "../pages/Books";
 import Product from "../components/Product";
+import Card from "../components/Card"
 
 export const ROUTES = [
     {
@@ -55,6 +56,12 @@ export const ROUTES = [
         name: "BLOG",
         url: "/blog",
         component: () => <AddBook />,
+        exact: false
+    },
+    {
+        name: "CARD",
+        url: "/card",
+        component: () => <Card />,
         exact: false
     },
     
