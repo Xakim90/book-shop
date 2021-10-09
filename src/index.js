@@ -7,12 +7,15 @@ import { BrowserRouter as Router } from "react-router-dom";
 import store from "./redux/redux-store";
 import AxiosConfig from "./config/AxiosConfig";
 import { Provider } from "react-redux";
+import CartState from './Context/Cart/CartState'
 
 ReactDOM.render(
   <Router>
     <Provider store={store}>
       <AxiosConfig>
-        <App />
+        <CartState>
+          <App />
+        </CartState>
       </AxiosConfig>
     </Provider>
   </Router>,

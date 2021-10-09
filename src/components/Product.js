@@ -1,51 +1,65 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import { useParams } from "react-router-dom";
-import { useState } from 'react';
+import CartContext from "../Context/Cart/CartContext";
 
 const Product = () => {
+    const { url } = useParams();
+    const [count, setCount] = useState(1);
+    // const url = id.replace(/\-/g, "/");
+    const { addToCart } = useContext(CartContext);
+
 
     const { url, title } = useParams();
     const [count, setCount] = useState(0);
     return (
-        <div className="w-full">
-            <div className="grid grid-cols-8">
-                <div className="col-span-2 text-left pl-2 pr-2">
-                    {/* <i className="font-bolder text-2xl">{title}</i> */}
-                    <div>
-                        <i className="font-bold text-2xl">COSMIC MUSIC HANDBOOK BY DARRELL DEVORE</i>
+        <div className="grid grid-cols-12 m-5">
+            <div className="col-span-3 text-left">
+                <br />
+                <hr />
+                <i className="font-semibold text-3xl">
+                    BUDDHIST IMPRESSIONS: A PICTORIAL INTRODUCTION TO THE DOCTRINE
+                </i>
+                <div className="text-xl font-semibold mt-2">$ 40.00 USD </div>
+                <p>Quantity</p>
+                <div className="grid grid-cols-5">
+                    <div className="col-span-1">
+                        <input
+                            type="number"
+                            value={count}
+                            min="1"
+                            className="w-3/4 h-10 border-2 text-center border-black" 
+                            onChange={(e) => setCount(e.target.value)}
+                            // onChange={() => count < 20 ? setCount(count + 1) : setCount(20)}
+                        />
                     </div>
-                    <div className="text-xl font-bolder mt-2">€171.13 EUR </div>
-                    <p className="">Quantity</p>
-                    <div className="grid grid-cols-5 mt-2">
-                        <div className="col-span-1">
-
-                            <input
-                                min="1"
-                                value={count}
-                                onChange={(e) => setCount(e.target.value)}
-                                className="w-3/4 h-10 border text-center"
-                                type="number"
-                            />
-                        </div>
-                        <div className="col-span-2">
-                            <button className="h-10 bg-black text-white text-xs px-10 py-2">
-                                ADD TO CART
-                            </button>
-                        </div>
-                        <div className="col-span-2"></div>
+                    <div className="col-span-3">
+                        <button
+                            type="button"
+                            className="bg-black text-sm h-10 text-white px-10"
+                            onClick={() => addToCart(count)}
+                        >
+                            Add to cart
+                        </button>
                     </div>
-                    <div className="grid grid-cols-4 gap-3 mt-3 bg-white">
-                        <img className="w-full mt-2" src={url.replace(/\|/g, "/")} alt="" />
-                        <img className="w-full mt-2" src={url.replace(/\|/g, "/")} alt="" />
-                        <img className="w-full mt-2" src={url.replace(/\|/g, "/")} alt="" />
-                        <img className="w-full mt-2" src={url.replace(/\|/g, "/")} alt="" />
-                        <img className="w-full mt-2" src={url.replace(/\|/g, "/")} alt="" />
-                    </div>
+                    <div className="col-span-1"></div>
                 </div>
-                <div className="col-span-4">
-                    <img className="w-full" src={url.replace(/\|/g, "/")} alt="" />
+                <br />
+                <div className="grid grid-cols-4 mr-4">
+                    <div><img src={url.replace(/\|/g, "/")} alt="img" /></div>
+                    <div><img src={url.replace(/\|/g, "/")} alt="img" /></div>
+                    <div><img src={url.replace(/\|/g, "/")} alt="img" /></div>
+                    <div><img src={url.replace(/\|/g, "/")} alt="img" /></div>
+                    <div><img src={url.replace(/\|/g, "/")} alt="img" /></div>
                 </div>
-                <div className="col-span-2">asdasdasd</div>
+            </div>
+            <div className="col-span-6">
+                <br />
+                <br />
+                <img className="h-screen w-full" src={url.replace(/\|/g, "/")} alt="img" />
+            </div>
+            <div className="col-span-3">
+                <br />
+                <hr />
             </div>
         </div>
     )

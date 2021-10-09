@@ -19,14 +19,15 @@ const Home = () => {
                 {
                     images.map((item, index) => {
                         return (
-                                <CustomCard
-                                    key={index}
-                                    img={item.photo}
-                                    img2={item.photo2}
-                                    title={item.name}
-                                    price={item.price}
-                                    doublePhoto={false}
-                                />
+                            <CustomCard
+                                key={index}
+                                img={item.photo}
+                                img2={item.photo2}
+                                title={item.name}
+                                price={item.price}
+                                doublePhoto={false}
+                                id={item.id}
+                            />
                         )
                     })
                 }

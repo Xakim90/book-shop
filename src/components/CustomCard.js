@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom';
 const CustomCard = ({ img, img2, title, price, doublePhoto = true }) => {
     const [photo, setPhoto] = useState(false);
 
+    // const newImg = img.replace("https://", "");
+    // const newImg2 = img.replace(/\//g, "-");
+    // let url = newImg2 && newImg;
+
+
     return (
         <div>
             {/* <img
@@ -23,8 +28,8 @@ const CustomCard = ({ img, img2, title, price, doublePhoto = true }) => {
                         alt="Book"
                     />
                 ) : (
-                    <Link to={"/product/" + img.replace(/\//g, "|")}>
-                        <img className="cursor-pointer" src={img} alt="books" /> 
+                    <Link to={"/product/" + img.replace(/\//g, "|")+ "/" + id} >
+                        <img className="cursor-pointer" src={img} alt="books" />
                     </Link>
                 )
             }
